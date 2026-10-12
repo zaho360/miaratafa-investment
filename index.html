@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miaratafa Investment</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f6f4;
+      color: #18352a;
+    }
+    header {
+      background: #075e43;
+      color: white;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; }
+    main {
+      max-width: 500px;
+      margin: 24px auto;
+      padding: 16px;
+    }
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px #00000010;
+    }
+    input, button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    input { border: 1px solid #ccd7d0; }
+    button {
+      border: 0;
+      background: #08764f;
+      color: white;
+      font-weight: bold;
+    }
+    .note {
+      font-size: 13px;
+      color: #53665b;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Miaratafa Investment</h1>
+    <p> Tongasoa eto amin'ny tranonkalantsika </p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Mamorona kaonty</h2>
+      <p>Misorata anarana mba hanombohana.</p>
+      <form id="signup">
+        <input type="text" id="name" placeholder="Anarana feno" required>
+        <input type="email" id="email" placeholder="Adiresy email" required>
+        <input type="password" id="password" placeholder="Tenimiafina (8 tarehintsoratra farafahakeliny)" minlength="8" required>
+        <button type="submit">Hisoratra anarana</button>
+      </form>
+      <p id="message" role="status"></p>
+      <p class="note">
+        Dika fanombohana ihany ity pejy ity. Mbola tsy mifandray amin'ny
+        Supabase, ka tsy mbola mitahiry kaonty na mandray dépôt.
+      </p>
+    </section>
+  </main>
+  <footer>© Miaratafa Investment</footer>
+  <script>
+    document.getElementById("signup").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("message").textContent =
+        "Mbola eo am-panamboarana ny fisoratana anarana. Andraso ny dingana manaraka.";
+    });
+  </script>
+</body>
+</html>
